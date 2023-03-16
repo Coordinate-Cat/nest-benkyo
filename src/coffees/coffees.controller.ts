@@ -24,8 +24,12 @@ export class CoffeesController {
   // curl http://localhost:3000/coffees -i -X GET -H "Content-Type: application/json" -d '{"limit":10,"offset":5}'
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.coffeesService.findOne(id);
+  findOne(@Param('id') id: number) {
+    console.log(typeof id);
+    // number型に変換される
+    return this.coffeesService.findOne('' + id);
+    // 逆にstring型に変換したい場合は、
+    // return this.coffeesService.findOne(id);
   }
 
   @Post()
