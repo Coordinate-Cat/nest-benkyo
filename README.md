@@ -1,10 +1,17 @@
 # nest-benkyo
 
-ここまでやった
-https://learn.nestjs.com/courses/591712/lectures/23356957
+> **Warning**
+> ブランチは`benkyo`
+> ※ `main` がぶっ壊れてる
 
-ブランチも変えました
+## start
 
 ```
 yarn start:dev
+```
+
+## docker
+
+```
+docker-compose up -d
 ```
